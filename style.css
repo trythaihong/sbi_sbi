@@ -1009,15 +1009,13 @@ nav {
    
     width: 100%;
 }
-.contact_cart{
+.contact_cart {
     text-align: center;
-
- display: grid;
- grid-template-columns: repeat(auto-fill(maxmin(3fr,300px)));
- gap: 50px;
-
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
+    gap: 50px;
 }
+
 .contact-info h3 {
     font-size: 1.8rem;
     margin-bottom: 3rem;
