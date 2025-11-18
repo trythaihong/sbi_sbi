@@ -308,33 +308,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// =========================================
-// Contact Form Submission
-// =========================================
 
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = {
-            name: contactForm.querySelector('input[type="text"]').value,
-            phone: contactForm.querySelector('input[type="tel"]').value,
-            email: contactForm.querySelector('input[type="email"]').value,
-            message: contactForm.querySelector('textarea').value,
-            date: new Date().toISOString()
-        };
-        
-        console.log('Contact form submitted:', formData);
-        
-        // Show success message
-        showNotification('សូមអរគុណ! សារបស់អ្នកត្រូវបានផ្ញើដោយជោគជ័យ។ យើងនឹងទាក់ទងមកអ្នកក្នុងពេលឆាប់ៗ។', 'success');
-        
-        // Reset form
-        contactForm.reset();
-    });
-}
 
 // =========================================
 // Scroll Animations
