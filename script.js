@@ -7,11 +7,6 @@ const TEST_CREDENTIALS = {
     email: 'demo@test.com',
     password: 'password123'
 };
-<script>
-// JS Example (optional hover animation)
-console.log("Feature Section Loaded");
-</script>
-
 
 // Check if user is logged in
 let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
@@ -385,45 +380,6 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
-
-// =========================================
-// Counter Animation for Stats
-// =========================================
-
-const animateCounter = (element, target, duration = 2000) => {
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + '+';
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current) + '+';
-        }
-    }, 16);
-};
-
-// Observe stats section for counter animation
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const statItems = entry.target.querySelectorAll('.stat-item h3');
-            statItems.forEach((item, index) => {
-                const values = [1000, 50, 10];
-                animateCounter(item, values[index], 2000);
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
 
 // =========================================
 // Notification System
