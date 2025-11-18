@@ -7,6 +7,11 @@ const TEST_CREDENTIALS = {
     email: 'demo@test.com',
     password: 'password123'
 };
+<script>
+// JS Example (optional hover animation)
+console.log("Feature Section Loaded");
+</script>
+
 
 // Check if user is logged in
 let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
